@@ -1,0 +1,44 @@
+<div class="container my-5 ">
+
+<h3>Add New Categorie</h3>
+
+
+<input name="categorie" class="form-control mx-4"  [(ngModel)]="categorie.name">
+<button class="btn btn-primary form-control " style="margin-top: 16px;" (click)="addCat()">Add Categorie</button>
+
+
+
+
+<h3>All Categorie</h3>
+
+<table class="table">
+
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>categorie</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr   *ngFor="let cat of categories">
+
+      <td>{{cat._id}}</td>
+      <td>{{cat.name}}</td>
+      <td>
+
+        <button class="btn btn-danger" (click)="deleteCat(cat._id)">Delete</button>
+
+      </td>
+    </tr>
+
+  </tbody>
+
+
+</table>
+
+
+
+</div>
